@@ -48,7 +48,7 @@
 		1FAE0CC21C1C79A500D3F35E = {
 			isa = PBXGroup;
 			children = (
-				1FAE0CCD1C1C79A500D3F35E /* Programming */,
+				1FAE0CCD1C1C79A500D3F35E /* bin */,
 				1FAE0CCC1C1C79A500D3F35E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -61,7 +61,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		1FAE0CCD1C1C79A500D3F35E /* Programming */ = {
+		1FAE0CCD1C1C79A500D3F35E /* bin */ = {
 			isa = PBXGroup;
 			children = (
 				1F3231311C83020800DA4672 /* main.cpp */,
@@ -70,6 +70,7 @@
 				1FB94FB31DAAA1CE006AB19D /* zabrat.cpp */,
 				1FB94FB21DAAA138006AB19D /* header.hpp */,
 			);
+			name = bin;
 			path = Programming;
 			sourceTree = "<group>";
 		};
