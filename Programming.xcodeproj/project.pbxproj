@@ -7,10 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1FB94FB11DAA9EFA006AB19D /* cop.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1FB94FB01DAA9EFA006AB19D /* cop.cpp */; };
-		1FB94FB51DAAA1CE006AB19D /* zabrat.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1FB94FB31DAAA1CE006AB19D /* zabrat.cpp */; };
-		1FB94FB81DAAA20D006AB19D /* game.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1FB94FB61DAAA20D006AB19D /* game.cpp */; };
-		1FB94FB91DAAA42C006AB19D /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1F3231311C83020800DA4672 /* main.cpp */; };
+		1F31FBFA1DACD9C20028ECB3 /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F31FBF91DACD9C20028ECB3 /* GLUT.framework */; };
+		1F31FBFC1DACD9C90028ECB3 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F31FBFB1DACD9C90028ECB3 /* OpenGL.framework */; };
+		1F31FC2F1DAD6B610028ECB3 /* drawCircle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1F31FC111DAD35420028ECB3 /* drawCircle.cpp */; };
+		1F31FC301DAD6B650028ECB3 /* draw.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1F31FC011DACDAD40028ECB3 /* draw.cpp */; };
+		1F31FC311DAD6B650028ECB3 /* display.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1F31FC0E1DAD34E40028ECB3 /* display.cpp */; };
+		1F31FC321DAD6B650028ECB3 /* reshape.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1F31FC0C1DAD34030028ECB3 /* reshape.cpp */; };
+		1F31FC331DAD6F170028ECB3 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1F3231311C83020800DA4672 /* main.cpp */; };
+		1F31FC341DAD6F170028ECB3 /* cop.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1FB94FB01DAA9EFA006AB19D /* cop.cpp */; };
+		1F31FC351DAD6F170028ECB3 /* game.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1FB94FB61DAAA20D006AB19D /* game.cpp */; };
+		1F31FC361DAD6F170028ECB3 /* zabrat.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1FB94FB31DAAA1CE006AB19D /* zabrat.cpp */; };
+		1F31FC371DAD6F170028ECB3 /* radius.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1F31FC2C1DAD688F0028ECB3 /* radius.cpp */; };
+		1F31FC381DAD6F170028ECB3 /* generator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1F31FC1A1DAD53B80028ECB3 /* generator.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -26,6 +34,17 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		1F31FBF91DACD9C20028ECB3 /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = System/Library/Frameworks/GLUT.framework; sourceTree = SDKROOT; };
+		1F31FBFB1DACD9C90028ECB3 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
+		1F31FC011DACDAD40028ECB3 /* draw.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = draw.cpp; sourceTree = "<group>"; };
+		1F31FC021DACDAD40028ECB3 /* include_GLUT.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = include_GLUT.hpp; sourceTree = "<group>"; };
+		1F31FC0B1DAD332A0028ECB3 /* functions.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = functions.hpp; sourceTree = "<group>"; };
+		1F31FC0C1DAD34030028ECB3 /* reshape.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = reshape.cpp; sourceTree = "<group>"; };
+		1F31FC0E1DAD34E40028ECB3 /* display.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = display.cpp; sourceTree = "<group>"; };
+		1F31FC111DAD35420028ECB3 /* drawCircle.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = drawCircle.cpp; sourceTree = "<group>"; };
+		1F31FC1A1DAD53B80028ECB3 /* generator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = generator.cpp; sourceTree = "<group>"; };
+		1F31FC2C1DAD688F0028ECB3 /* radius.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = radius.cpp; sourceTree = "<group>"; };
+		1F31FC2E1DAD6A0B0028ECB3 /* radius.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = radius.hpp; sourceTree = "<group>"; };
 		1F3231311C83020800DA4672 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; lineEnding = 0; path = main.cpp; sourceTree = "<group>"; tabWidth = 4; wrapsLines = 1; };
 		1FAE0CCB1C1C79A500D3F35E /* Programming */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Programming; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FB94FB01DAA9EFA006AB19D /* cop.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = cop.cpp; sourceTree = "<group>"; };
@@ -39,15 +58,63 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F31FBFC1DACD9C90028ECB3 /* OpenGL.framework in Frameworks */,
+				1F31FBFA1DACD9C20028ECB3 /* GLUT.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1F31FC091DAD31C30028ECB3 /* Game */ = {
+			isa = PBXGroup;
+			children = (
+				1F3231311C83020800DA4672 /* main.cpp */,
+				1F31FC151DAD36800028ECB3 /* Functions */,
+				1FB94FB21DAAA138006AB19D /* header.hpp */,
+			);
+			name = Game;
+			sourceTree = "<group>";
+		};
+		1F31FC0A1DAD31F40028ECB3 /* Animation */ = {
+			isa = PBXGroup;
+			children = (
+				1F31FC011DACDAD40028ECB3 /* draw.cpp */,
+				1F31FC0B1DAD332A0028ECB3 /* functions.hpp */,
+				1F31FC141DAD366F0028ECB3 /* Functions */,
+				1F31FC021DACDAD40028ECB3 /* include_GLUT.hpp */,
+			);
+			name = Animation;
+			sourceTree = "<group>";
+		};
+		1F31FC141DAD366F0028ECB3 /* Functions */ = {
+			isa = PBXGroup;
+			children = (
+				1F31FC111DAD35420028ECB3 /* drawCircle.cpp */,
+				1F31FC0E1DAD34E40028ECB3 /* display.cpp */,
+				1F31FC0C1DAD34030028ECB3 /* reshape.cpp */,
+			);
+			name = Functions;
+			sourceTree = "<group>";
+		};
+		1F31FC151DAD36800028ECB3 /* Functions */ = {
+			isa = PBXGroup;
+			children = (
+				1FB94FB01DAA9EFA006AB19D /* cop.cpp */,
+				1FB94FB61DAAA20D006AB19D /* game.cpp */,
+				1FB94FB31DAAA1CE006AB19D /* zabrat.cpp */,
+				1F31FC2C1DAD688F0028ECB3 /* radius.cpp */,
+				1F31FC1A1DAD53B80028ECB3 /* generator.cpp */,
+				1F31FC2E1DAD6A0B0028ECB3 /* radius.hpp */,
+			);
+			name = Functions;
+			sourceTree = "<group>";
+		};
 		1FAE0CC21C1C79A500D3F35E = {
 			isa = PBXGroup;
 			children = (
+				1F31FBFB1DACD9C90028ECB3 /* OpenGL.framework */,
+				1F31FBF91DACD9C20028ECB3 /* GLUT.framework */,
 				1FAE0CCD1C1C79A500D3F35E /* bin */,
 				1FAE0CCC1C1C79A500D3F35E /* Products */,
 			);
@@ -64,11 +131,8 @@
 		1FAE0CCD1C1C79A500D3F35E /* bin */ = {
 			isa = PBXGroup;
 			children = (
-				1F3231311C83020800DA4672 /* main.cpp */,
-				1FB94FB01DAA9EFA006AB19D /* cop.cpp */,
-				1FB94FB61DAAA20D006AB19D /* game.cpp */,
-				1FB94FB31DAAA1CE006AB19D /* zabrat.cpp */,
-				1FB94FB21DAAA138006AB19D /* header.hpp */,
+				1F31FC091DAD31C30028ECB3 /* Game */,
+				1F31FC0A1DAD31F40028ECB3 /* Animation */,
 			);
 			name = bin;
 			path = Programming;
@@ -130,10 +194,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1FB94FB11DAA9EFA006AB19D /* cop.cpp in Sources */,
-				1FB94FB51DAAA1CE006AB19D /* zabrat.cpp in Sources */,
-				1FB94FB91DAAA42C006AB19D /* main.cpp in Sources */,
-				1FB94FB81DAAA20D006AB19D /* game.cpp in Sources */,
+				1F31FC341DAD6F170028ECB3 /* cop.cpp in Sources */,
+				1F31FC321DAD6B650028ECB3 /* reshape.cpp in Sources */,
+				1F31FC351DAD6F170028ECB3 /* game.cpp in Sources */,
+				1F31FC371DAD6F170028ECB3 /* radius.cpp in Sources */,
+				1F31FC2F1DAD6B610028ECB3 /* drawCircle.cpp in Sources */,
+				1F31FC301DAD6B650028ECB3 /* draw.cpp in Sources */,
+				1F31FC331DAD6F170028ECB3 /* main.cpp in Sources */,
+				1F31FC381DAD6F170028ECB3 /* generator.cpp in Sources */,
+				1F31FC311DAD6B650028ECB3 /* display.cpp in Sources */,
+				1F31FC361DAD6F170028ECB3 /* zabrat.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
