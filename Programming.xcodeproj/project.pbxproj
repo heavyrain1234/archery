@@ -44,7 +44,6 @@
 		1F31FC111DAD35420028ECB3 /* drawCircle.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = drawCircle.cpp; sourceTree = "<group>"; };
 		1F31FC1A1DAD53B80028ECB3 /* generator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = generator.cpp; sourceTree = "<group>"; };
 		1F31FC2C1DAD688F0028ECB3 /* radius.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = radius.cpp; sourceTree = "<group>"; };
-		1F31FC2E1DAD6A0B0028ECB3 /* radius.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = radius.hpp; sourceTree = "<group>"; };
 		1F3231311C83020800DA4672 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; lineEnding = 0; path = main.cpp; sourceTree = "<group>"; tabWidth = 4; wrapsLines = 1; };
 		1FAE0CCB1C1C79A500D3F35E /* Programming */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Programming; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FB94FB01DAA9EFA006AB19D /* cop.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = cop.cpp; sourceTree = "<group>"; };
@@ -105,7 +104,6 @@
 				1FB94FB31DAAA1CE006AB19D /* zabrat.cpp */,
 				1F31FC2C1DAD688F0028ECB3 /* radius.cpp */,
 				1F31FC1A1DAD53B80028ECB3 /* generator.cpp */,
-				1F31FC2E1DAD6A0B0028ECB3 /* radius.hpp */,
 			);
 			name = Functions;
 			sourceTree = "<group>";

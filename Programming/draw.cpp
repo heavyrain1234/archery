@@ -1,3 +1,6 @@
+//Я не знаю GLUT, поэтому все, что здесь происходит, какая то магия.
+//И кстати, если открывается несколько окон, это норма.
+
 #include "include_GLUT.hpp"
 #include "functions.hpp"
 #include <csetjmp>
