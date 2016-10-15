@@ -9,7 +9,7 @@ int game (luchnik *a_game, luchnik *b_game, float &hp_summ_a, float &hp_summ_b )
     }
     
     for (int i=0; i<20; i++){
-        if (a_game[i].hp>0&&b_game[a_game[i].target].hp>0&&a_game[i].target>=0){
+        if (a_game[i].hp>0&&b_game[a_game[i].target].hp>0){
             if (a_game[i].target!=-1){
                 b_game[a_game[i].target].hp-=a_game[i].udar;
                 hp_summ_b-=a_game[i].udar;
@@ -19,7 +19,7 @@ int game (luchnik *a_game, luchnik *b_game, float &hp_summ_a, float &hp_summ_b )
                 a_game[i].sila++;
         }
         
-        if (b_game[i].hp>=0&&a_game[b_game[i].target].hp>0&&b_game[i].target>=0){
+        if (b_game[i].hp>=0&&a_game[b_game[i].target].hp>0){
             if (b_game[i].target!=-1){
                 a_game[b_game[i].target].hp-=b_game[i].udar;
                 hp_summ_a-=b_game[i].udar;
