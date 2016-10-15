@@ -13,7 +13,7 @@ int game (luchnik *a_game, luchnik *b_game, float &hp_summ_a, float &hp_summ_b )
             if (a_game[i].target!=-1){
                 b_game[a_game[i].target].hp-=a_game[i].udar;
                 hp_summ_b-=a_game[i].udar;
-                a_game[i].sila++;
+                a_game[i].sila=0;
             }
             else
                 a_game[i].sila++;
