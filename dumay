@@ -1,0 +1,150 @@
+#include<iostream>; 
+#include<cstdlib>; 
+#include<ctime>; 
+using namespace std;
+
+struct luchnik {
+	int sila, target;
+	float hp = 100, udar = 0;
+};
+int gen(luchnik *mas_gen) {
+
+	for (int i = 0; i<20; i++) {
+		mas_gen[i].udar = 0;
+		mas_gen[i].hp = 100;
+		mas_gen[i].target = 0;
+		mas_gen[i].sila = 0;
+	}
+	return 0;
+}
+int dumai1(luchnik*ca, luchnik*cb) {
+	int max, pot, minpot;
+	for (int i = 0; i < 20; i++) {
+		srand(time(NULL));
+		max = 0;
+		minpot = 100;
+		if ((ca[i].sila == 2)&&(ca[i].hp>0)) {
+			for (int g = 0; g < 20; g++) {
+				if (cb[g].sila > max) max = cb[g].sila;
+			}
+			for (int g = 0; g < 20; g++) {
+				if (cb[g].sila == max) {
+					pot = cb[g].hp - (rand() % (ca[i].sila / 2 + 2))*1.0*ca[i].hp;
+					if (minpot >= pot) {
+						ca[i].target = g;
+						minpot = pot;
+					}
+				}
+				cb[ca[i].target].hp = cb[g].hp - (rand() % (ca[i].sila / 2 + 2))*1.0*ca[i].hp;
+			}
+		}
+		else ca[i].target = -1;
+		cout << ca[i].target << " ";
+	}
+	cout << endl;
+	return 0;
+}
+int dumai2(luchnik*ca, luchnik*cb) {
+	srand(time(NULL));
+	int max, pot, minpot;
+	for (int i = 0; i < 20; i++) {
+		max = 0;
+		minpot = 100;
+		if ((cb[i].sila == 2) && (cb[i].hp>0)) {
+			for (int g = 0; g < 20; g++) {
+				if (ca[g].sila > max) max = ca[g].sila;
+			}
+			for (int g = 0; g < 20; g++) {
+				if (ca[g].sila >= max) {
+					pot = ca[g].hp - (rand() % (cb[i].sila / 2 + 2))*1.0*cb[i].hp;
+					if (minpot >= pot) {
+						cb[i].target = g;
+						minpot = pot;
+					}
+				}
+				ca[cb[i].target].hp = ca[g].hp - (rand() % (cb[i].sila / 2 + 2))*1.0*cb[i].hp;
+			}
+		}
+		else cb[i].target = -1;
+		cout << cb[i].target << " ";
+	}
+	cout << endl << endl;
+	return 0;
+}
+int zabrat(luchnik *mas_zabrat, luchnik *cmas_zabrat) {
+	for (int i = 0; i<20; i++) {
+		mas_zabrat[i].target = cmas_zabrat[i].target;
+	}
+	return 0;
+}
+int cop(luchnik *mas_cop, luchnik *cmas_cop, luchnik *ccmas_cop) {
+	for (int i = 0; i<20; i++) {
+
+		cmas_cop[i].target = mas_cop[i].target;
+		ccmas_cop[i].target = mas_cop[i].target;
+
+		cmas_cop[i].sila = mas_cop[i].sila;
+		ccmas_cop[i].sila = mas_cop[i].sila;
+
+		cmas_cop[i].hp = mas_cop[i].hp;
+		ccmas_cop[i].hp = mas_cop[i].hp;
+
+	}
+	return 0;
+}
+int game(luchnik *a_game, luchnik *b_game, float &hp_summ_a, float &hp_summ_b) {
+	srand(time(NULL));
+	for (int i = 0; i<20; i++) {
+		if (a_game[i].hp>0) {
+			a_game[i].udar = 1.0*(rand() % (a_game[i].sila / 2 + 2) + (a_game[i].sila / 2))* (a_game[i].hp / 100);
+		}
+		if (b_game[i].hp>0) {
+			b_game[i].udar = 1.0*(rand() % (b_game[i].sila / 2 + 2) + (b_game[i].sila / 2))* (b_game[i].hp / 100);
+		}
+	}
+
+	for (int i = 0; i < 20; i++) {
+		if ((a_game[i].hp > 0)&& (a_game[i].target != -1)) {
+				b_game[a_game[i].target].hp -= a_game[i].udar;
+				hp_summ_b -= a_game[i].udar;
+				a_game[i].sila = 0;
+			}
+			else
+				if (a_game[i].hp > 0)a_game[i].sila++;
+		if ((b_game[i].hp > 0)&& (b_game[i].target != -1)) {
+				a_game[b_game[i].target].hp -= b_game[i].udar;
+				hp_summ_a -= b_game[i].udar;
+				b_game[i].sila = 0;
+			}
+			else
+				if (b_game[i].hp > 0)b_game[i].sila++;
+		}
+	return 0;
+}
+
+int main() {
+	float hp_summ_a = 20 * 100, hp_summ_b = 20 * 100;
+	luchnik a[20], b[20], ca[20], cb[20], cca[20], ccb[20];
+	gen(a);
+	gen(ca);
+	gen(cca);
+	gen(b);
+	gen(cb);
+	gen(ccb);
+	dumai1(ca, cb);
+	while ((hp_summ_a > 0) && (hp_summ_b > 0)) {
+		cop(a, ca, cca);
+		cop(b, cb, ccb);
+		dumai1(ca, cb);
+		dumai2(cca, ccb);
+		zabrat(b, ccb);
+		zabrat(a, ca);
+		game(a, b, hp_summ_a, hp_summ_b);
+	}
+	if (hp_summ_a <= 0)
+		cout << "B-Wins" << endl;
+
+	else
+		cout << "A-Wins" << endl;
+	return 0;
+}
